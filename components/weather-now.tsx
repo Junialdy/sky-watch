@@ -1,6 +1,11 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 
-import { ThermometerSunIcon } from "./icons";
+import {
+  ThermometerSunIcon,
+  DropletIcon,
+  DropletsIcon,
+  EyeIcon,
+} from "./icons";
 
 export default function WeatherNow() {
   return (
@@ -27,7 +32,7 @@ export default function WeatherNow() {
           </Card>
           <Card className="bg-default-100 p-2 w-full" shadow="none">
             <CardHeader className="flex gap-3 items-center">
-              <ThermometerSunIcon className="stroke-default-400" />
+              <DropletIcon className="stroke-default-400" />
               <p className="uppercase text-xl text-default-400">
                 Precipitation
               </p>
@@ -46,7 +51,7 @@ export default function WeatherNow() {
         <div className="flex gap-8">
           <Card className="bg-default-100 p-2 w-full" shadow="none">
             <CardHeader className="flex gap-3 items-center">
-              <ThermometerSunIcon className="stroke-default-400" />
+              <EyeIcon className="stroke-default-400" />
               <p className="uppercase text-xl text-default-400">Visibility</p>
             </CardHeader>
             <CardBody>
@@ -55,7 +60,7 @@ export default function WeatherNow() {
           </Card>
           <Card className="bg-default-100 p-2 w-full" shadow="none">
             <CardHeader className="flex gap-3 items-center">
-              <ThermometerSunIcon className="stroke-default-400" />
+              <DropletsIcon className="stroke-default-400" />
               <p className="uppercase text-xl text-default-400">Humidity</p>
             </CardHeader>
             <CardBody>

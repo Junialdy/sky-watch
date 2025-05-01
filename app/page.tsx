@@ -1,4 +1,5 @@
 import SearchInput from "@/components/search-input";
+import WeatherLater from "@/components/weather-later";
 import WeatherNow from "@/components/weather-now";
 
 export default function Home() {
@@ -8,8 +9,8 @@ export default function Home() {
         <SearchInput />
         <WeatherNow />
       </div>
-      <div className="border-sky-400 border-2 h-full w-full rounded-2xl p-5 sm:p-8 lg:col-span-3">
-        <h1>this is second</h1>
+      <div className="border-sky-400  h-full w-full rounded-2xl lg:col-span-3">
+        <WeatherLater />
       </div>
     </div>
   );

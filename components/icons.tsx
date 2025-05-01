@@ -54,6 +54,59 @@ export const MapPinIcon: React.FC<IconSvgProps> = ({
   );
 };
 
+export const ClockIcon: React.FC<IconSvgProps> = ({
+  size = 28,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+    >
+      <path
+        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const CalendarIcon: React.FC<IconSvgProps> = ({
+  size = 28,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+    >
+      <path d="M8 2v4" />
+      <path d="M16 2v4" />
+      <rect height="18" rx="2" width="18" x="3" y="4" />
+      <path d="M3 10h18" />
+    </svg>
+  );
+};
+
 export const ThermometerSunIcon: React.FC<IconSvgProps> = ({
   size = 28,
   width,
@@ -78,6 +131,31 @@ export const ThermometerSunIcon: React.FC<IconSvgProps> = ({
       <path d="M20 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
       <path d="M4 13H2" />
       <path d="M6.34 7.34 4.93 5.93" />
+    </svg>
+  );
+};
+
+export const WindIcon: React.FC<IconSvgProps> = ({
+  size = 28,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+    >
+      <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
+      <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
+      <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
     </svg>
   );
 };
@@ -197,30 +275,49 @@ export const SunFilledIcon = ({
   </svg>
 );
 
-export const SearchIcon = (props: IconSvgProps) => (
+export const CloudIcon = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
   <svg
     aria-hidden="true"
     fill="none"
-    focusable="false"
-    height="1em"
-    role="presentation"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
     viewBox="0 0 24 24"
-    width="1em"
+    width={size || width}
     {...props}
   >
-    <path
-      d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    />
-    <path
-      d="M22 22L20 20"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    />
+    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+  </svg>
+);
+
+export const CloudRainIcon = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+    <path d="M16 14v6" />
+    <path d="M8 14v6" />
+    <path d="M12 16v6" />
   </svg>
 );

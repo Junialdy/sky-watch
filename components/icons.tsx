@@ -55,7 +55,7 @@ export const MapPinIcon: React.FC<IconSvgProps> = ({
 };
 
 export const ThermometerSunIcon: React.FC<IconSvgProps> = ({
-  size = 24,
+  size = 28,
   width,
   height,
   ...props

@@ -16,10 +16,10 @@ export default function WeatherNow() {
       </div>
       <div className="flex flex-col gap-8">
         <div className="flex gap-8">
-          <Card className="bg-default-100 p-2 w-full" shadow="none">
-            <CardHeader className="flex gap-3 items-center">
+          <Card className="card-container" shadow="none">
+            <CardHeader className="card-header">
               <ThermometerSunIcon className="stroke-default-400" />
-              <p className="uppercase text-xl text-default-400">feels like</p>
+              <p className="card-header-title">feels like</p>
             </CardHeader>
             <CardBody>
               <p className="text-5xl">30°</p>
@@ -30,12 +30,10 @@ export default function WeatherNow() {
               </p>
             </CardFooter>
           </Card>
-          <Card className="bg-default-100 p-2 w-full" shadow="none">
-            <CardHeader className="flex gap-3 items-center">
+          <Card className="card-container" shadow="none">
+            <CardHeader className="card-header">
               <DropletIcon className="stroke-default-400" />
-              <p className="uppercase text-xl text-default-400">
-                Precipitation
-              </p>
+              <p className="card-header-title">Precipitation</p>
             </CardHeader>
             <CardBody className="flex flex-col gap-2">
               <p className="text-5xl">2.3&quot;</p>
@@ -49,19 +47,19 @@ export default function WeatherNow() {
           </Card>
         </div>
         <div className="flex gap-8">
-          <Card className="bg-default-100 p-2 w-full" shadow="none">
-            <CardHeader className="flex gap-3 items-center">
+          <Card className="card-container" shadow="none">
+            <CardHeader className="card-header">
               <EyeIcon className="stroke-default-400" />
-              <p className="uppercase text-xl text-default-400">Visibility</p>
+              <p className="card-header-title">Visibility</p>
             </CardHeader>
             <CardBody>
               <p className="text-5xl">6 km</p>
             </CardBody>
           </Card>
-          <Card className="bg-default-100 p-2 w-full" shadow="none">
-            <CardHeader className="flex gap-3 items-center">
+          <Card className="card-container" shadow="none">
+            <CardHeader className="card-header">
               <DropletsIcon className="stroke-default-400" />
-              <p className="uppercase text-xl text-default-400">Humidity</p>
+              <p className="card-header-title">Humidity</p>
             </CardHeader>
             <CardBody>
               <p className="text-5xl">82%</p>

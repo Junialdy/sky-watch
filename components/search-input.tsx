@@ -5,11 +5,11 @@ import { ThemeSwitch } from "./theme-switch";
 
 export default async function SearchInput() {
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-6">
       <Input
         aria-label="Search"
         classNames={{
-          inputWrapper: "bg-default-100",
+          inputWrapper: "bg-default-100 py-6",
           input: "text-sm",
         }}
         labelPlacement="outside"

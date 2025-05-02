@@ -10,11 +10,16 @@ import {
   WindIcon,
 } from "./icons";
 
+import { laterWeather } from "@/lib/definitions";
 import { forecastDays, forecastHours } from "@/lib/data-placeholder";
 
 const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-export default function WeatherLater() {
+export default function WeatherLater({
+  laterWeather,
+}: {
+  laterWeather: laterWeather;
+}) {
   return (
     <div className="flex flex-col gap-8">
       <Card className="card-container" shadow="none">

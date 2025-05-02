@@ -115,14 +115,23 @@ export default function WeatherLater() {
             <WindIcon className="stroke-default-400" />
             <p className="card-header-title">Wind</p>
           </CardHeader>
-          <CardBody className="flex flex-row gap-8">
-            <div>
-              <p className="text-5xl my-2">3 KPH</p>
-              <Divider />
-              <p className="text-5xl my-2">9 KPH</p>
-            </div>
-            <div>
-              <p>Compas</p>
+          <CardBody className="flex flex-row gap-8 w-full">
+            <div className="flex  gap-8 w-full">
+              <div className="flex flex-row justify-center items-center gap-2 w-full">
+                <p className="text-6xl my-2">3</p>
+                <div>
+                  <p className="text-2xl text-default-400">KPH</p>
+                  <p className="text-2xl">Wind</p>
+                </div>
+              </div>
+              <Divider orientation="vertical" />
+              <div className="flex flex-row justify-center items-center gap-2 w-full">
+                <p className="text-6xl my-2">9</p>
+                <div>
+                  <p className="text-2xl text-default-400">KPH</p>
+                  <p className="text-2xl">Gusts</p>
+                </div>
+              </div>
             </div>
           </CardBody>
         </Card>

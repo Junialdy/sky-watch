@@ -19,7 +19,7 @@ export default function WeatherLater() {
     <div className="flex flex-col gap-8">
       <Card className="card-container" shadow="none">
         <CardHeader className="card-header">
-          <ClockIcon className="stroke-default-400" />
+          <ClockIcon className="card-header-icon" />
           <p className="card-header-title">Hourly Forecast</p>
         </CardHeader>
         <Divider />
@@ -56,7 +56,7 @@ export default function WeatherLater() {
       </Card>
       <Card className="card-container" shadow="none">
         <CardHeader className="card-header">
-          <CalendarIcon className="stroke-default-400" />
+          <CalendarIcon className="card-header-icon" />
           <p className="card-header-title">10-Day Forecast</p>
         </CardHeader>
         <Divider />
@@ -94,10 +94,10 @@ export default function WeatherLater() {
           })}
         </CardBody>
       </Card>
-      <div className="flex gap-8">
+      <div className="flex flex-col sm:flex-row gap-8">
         <Card className="card-container" shadow="none">
           <CardHeader className="card-header">
-            <ThermometerSunIcon className="stroke-default-400" />
+            <ThermometerSunIcon className="card-header-icon" />
             <p className="card-header-title">UV Index</p>
           </CardHeader>
           <CardBody>
@@ -112,24 +112,24 @@ export default function WeatherLater() {
         </Card>
         <Card className="card-container" shadow="none">
           <CardHeader className="card-header">
-            <WindIcon className="stroke-default-400" />
+            <WindIcon className="card-header-icon" />
             <p className="card-header-title">Wind</p>
           </CardHeader>
           <CardBody className="flex flex-row gap-8 w-full">
-            <div className="flex  gap-8 w-full">
+            <div className="flex gap-4 w-full">
               <div className="flex flex-row justify-center items-center gap-2 w-full">
-                <p className="text-6xl my-2">3</p>
+                <p className="text-5xl sm:text-6xl my-2">3</p>
                 <div>
-                  <p className="text-2xl text-default-400">KPH</p>
-                  <p className="text-2xl">Wind</p>
+                  <p className="text-xl sm:text-2xl text-default-400">KPH</p>
+                  <p className="text-xl sm:text-2xl">Wind</p>
                 </div>
               </div>
               <Divider orientation="vertical" />
               <div className="flex flex-row justify-center items-center gap-2 w-full">
-                <p className="text-6xl my-2">9</p>
+                <p className="text-5xl sm:text-6xl my-2">9</p>
                 <div>
-                  <p className="text-2xl text-default-400">KPH</p>
-                  <p className="text-2xl">Gusts</p>
+                  <p className="text-xl sm:text-2xl text-default-400">KPH</p>
+                  <p className="text-xl sm:text-2xl">Gusts</p>
                 </div>
               </div>
             </div>

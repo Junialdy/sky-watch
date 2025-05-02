@@ -10,15 +10,15 @@ import {
 export default function WeatherNow() {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-2 bg-default-100 rounded-2xl p-24 text-center">
-        <h2 className="text-8xl">28°</h2>
-        <p className="text-4xl">Rainy Day</p>
+      <div className="flex flex-col gap-4 bg-default-100 rounded-2xl p-16 sm:p-24 text-center">
+        <h2 className="text-7xl sm:text-8xl">28°</h2>
+        <p className="text-2xl sm:text-4xl">Patchy rain nearby</p>
       </div>
       <div className="flex flex-col gap-8">
-        <div className="flex gap-8">
+        <div className="flex flex-col sm:flex-row gap-8">
           <Card className="card-container" shadow="none">
             <CardHeader className="card-header">
-              <ThermometerSunIcon className="stroke-default-400" />
+              <ThermometerSunIcon className="card-header-icon" />
               <p className="card-header-title">feels like</p>
             </CardHeader>
             <CardBody>
@@ -32,7 +32,7 @@ export default function WeatherNow() {
           </Card>
           <Card className="card-container" shadow="none">
             <CardHeader className="card-header">
-              <DropletIcon className="stroke-default-400" />
+              <DropletIcon className="card-header-icon" />
               <p className="card-header-title">Precipitation</p>
             </CardHeader>
             <CardBody className="flex flex-col gap-2">
@@ -46,10 +46,10 @@ export default function WeatherNow() {
             </CardFooter>
           </Card>
         </div>
-        <div className="flex gap-8">
+        <div className="flex flex-col sm:flex-row gap-8">
           <Card className="card-container" shadow="none">
             <CardHeader className="card-header">
-              <EyeIcon className="stroke-default-400" />
+              <EyeIcon className="card-header-icon" />
               <p className="card-header-title">Visibility</p>
             </CardHeader>
             <CardBody>
@@ -58,7 +58,7 @@ export default function WeatherNow() {
           </Card>
           <Card className="card-container" shadow="none">
             <CardHeader className="card-header">
-              <DropletsIcon className="stroke-default-400" />
+              <DropletsIcon className="card-header-icon" />
               <p className="card-header-title">Humidity</p>
             </CardHeader>
             <CardBody>

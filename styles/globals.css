@@ -8,8 +8,12 @@
 .card-header {
   @apply flex gap-3 items-center;
 }
+
+.card-header-icon {
+  @apply stroke-default-400 size-6 sm:size-7;
+}
 .card-header-title {
-  @apply uppercase text-xl text-default-400;
+  @apply uppercase text-lg sm:text-xl text-default-400;
 }
 .forecast-card-body {
   @apply flex overflow-x-auto flex-row gap-6 p-4;

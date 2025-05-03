@@ -11,8 +11,10 @@ import { currentWeather } from "@/lib/definitions";
 
 export default function WeatherNow({
   currentWeather,
+  totalprecip_in,
 }: {
   currentWeather: currentWeather;
+  totalprecip_in: number[];
 }) {
   return (
     <div className="flex flex-col gap-8">
@@ -46,12 +48,12 @@ export default function WeatherNow({
               <p className="card-header-title">Precipitation</p>
             </CardHeader>
             <CardBody className="flex flex-col gap-2">
-              <p className="text-5xl">{currentWeather.precip_mm}&quot;</p>
+              <p className="text-5xl">{totalprecip_in[0]}&quot;</p>
               <p className="text-xl">in last 24h</p>
             </CardBody>
             <CardFooter>
               <p className="text-base text-default-400">
-                2&quot; expected in next 24h
+                {totalprecip_in[1]}&quot; expected in next 24h
               </p>
             </CardFooter>
           </Card>

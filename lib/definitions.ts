@@ -26,7 +26,7 @@ export type currentWeather = {
 };
 
 export type laterWeather = {
-  forecast: {
+  forecastday: {
     date: string;
     date_epoch: number;
     day: {
@@ -35,6 +35,7 @@ export type laterWeather = {
       avgtemp_c: number;
       maxwind_kph: number;
       totalprecip_mm: number;
+      totalprecip_in: number;
       totalsnow_cm: number;
       avgvis_km: number;
       avghumidity: number;

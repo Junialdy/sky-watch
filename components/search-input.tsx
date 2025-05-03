@@ -1,18 +1,60 @@
-import { Input } from "@heroui/input";
+"use client";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { Autocomplete, AutocompleteItem } from "@heroui/autocomplete";
+import { useDebouncedCallback } from "use-debounce";
+import { useState } from "react";
 
 import { MapPinIcon } from "./icons";
 import { ThemeSwitch } from "./theme-switch";
 
-export default async function SearchInput() {
+export default function SearchInput() {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+  const [places, setPlaces] = useState<{ label: string; key: string }[]>([]);
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSearch = useDebouncedCallback(async (term: string) => {
+    if (!term) {
+      setPlaces([]);
+
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const res = await fetch(`/api/search?q=${term}`);
+      const data = await res.json();
+
+      if (Array.isArray(data)) {
+        const mappedPlaces = data.map((item) => ({
+          label: `${item.name}, ${item.country}`,
+          key: item.id.toString(),
+        }));
+
+        setPlaces(mappedPlaces);
+      } else {
+        setPlaces([]);
+        throw Error("Unexpected API response:", data);
+      }
+    } catch (error) {
+      setPlaces([]);
+      throw Error(`Error fetching places: ${error}`);
+    } finally {
+      setIsLoading(false);
+    }
+  }, 200);
+
   return (
     <div className="flex gap-6">
-      <Input
-        aria-label="Search"
-        classNames={{
-          inputWrapper: "bg-default-100 py-6",
-          input: "text-sm",
-        }}
-        labelPlacement="outside"
+      <Autocomplete
+        aria-label="Input search"
+        className="bg-default-100 rounded-lg py-1"
+        defaultItems={places}
+        inputValue={inputValue}
+        isLoading={isLoading}
         placeholder="Search..."
         startContent={
           <MapPinIcon
@@ -20,9 +62,25 @@ export default async function SearchInput() {
             strokeWidth={2}
           />
         }
-        type="search"
-      />
+        onInputChange={(value) => {
+          setInputValue(value);
+          handleSearch(value);
+        }}
+        onSelectionChange={(key) => {
+          const selectedPlace = places.find((p) => p.key === key);
 
+          if (selectedPlace) {
+            const params = new URLSearchParams(searchParams);
+
+            params.set("q", selectedPlace.label);
+            replace(`${pathname}?${params.toString()}`);
+          }
+        }}
+      >
+        {places.map((place) => (
+          <AutocompleteItem key={place.key}>{place.label}</AutocompleteItem>
+        ))}
+      </Autocomplete>
       <ThemeSwitch />
     </div>
   );

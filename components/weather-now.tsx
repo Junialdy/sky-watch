@@ -5,26 +5,41 @@ import {
   DropletIcon,
   DropletsIcon,
   EyeIcon,
+  MapPinIcon,
 } from "./icons";
 
-import { currentWeather } from "@/lib/definitions";
+import { currentWeather, locationWeather } from "@/lib/definitions";
 
 export default function WeatherNow({
   currentWeather,
   totalprecip_in,
+  location,
 }: {
   currentWeather: currentWeather;
   totalprecip_in: number[];
+  location: locationWeather;
 }) {
+  const time_now = new Date(location.localtime);
+
   return (
-    <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-4 bg-default-100 rounded-2xl p-16 sm:p-24 text-center">
+    <div className="flex flex-col gap-8 ">
+      <div className="flex flex-col gap-4 bg-default-100 rounded-2xl p-16 sm:p-20 justify-center items-center ">
         <h2 className="text-7xl sm:text-8xl">
           {Math.round(currentWeather.temp_c)}°
         </h2>
-        <p className="text-2xl sm:text-4xl">{currentWeather.condition.text}</p>
+        <p className="text-xl sm:text-3xl">{currentWeather.condition.text}</p>
+        <div className="flex flex-row gap-2 justify-center">
+          <MapPinIcon className="text-base text-default-400" />
+          <p className="text-base text-default-400">{`${location.name}, ${location.country} (${time_now.toLocaleTimeString(
+            "en-US",
+            {
+              hour: "2-digit",
+              minute: "2-digit",
+            },
+          )})`}</p>
+        </div>
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 ">
         <div className="flex flex-col sm:flex-row gap-8">
           <Card className="card-container" shadow="none">
             <CardHeader className="card-header">

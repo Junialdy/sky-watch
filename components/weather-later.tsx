@@ -49,8 +49,8 @@ export default function WeatherLater({
   }
 
   return (
-    <div className="flex flex-col gap-8">
-      <Card className="card-container" shadow="none">
+    <div className="flex flex-col gap-8 h-full">
+      <Card className="card-container " shadow="none">
         <CardHeader className="card-header">
           <ClockIcon className="card-header-icon" />
           <p className="card-header-title">Hourly Forecast</p>
@@ -83,7 +83,7 @@ export default function WeatherLater({
           })}
         </CardBody>
       </Card>
-      <Card className="card-container" shadow="none">
+      <Card className="card-container " shadow="none">
         <CardHeader className="card-header">
           <CalendarIcon className="card-header-icon" />
           <p className="card-header-title">
@@ -129,7 +129,7 @@ export default function WeatherLater({
           })}
         </CardBody>
       </Card>
-      <div className="flex flex-col sm:flex-row gap-8">
+      <div className="flex flex-col sm:flex-row gap-8 ">
         <Card className="card-container" shadow="none">
           <CardHeader className="card-header">
             <ThermometerSunIcon className="card-header-icon" />

@@ -10,7 +10,7 @@ export default async function Home(props: {
 
   try {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=2863d05c37cc42758f194451232807&q=${query}&days=10&aqi=no&alerts=no`,
+      `http://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY}&q=${query}&days=10&aqi=no&alerts=no`,
     );
     const weather = await res.json();
 

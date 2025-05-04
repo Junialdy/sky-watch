@@ -23,7 +23,10 @@ export default function WeatherNow({
 
   return (
     <div className="flex flex-col gap-8 ">
-      <div className="flex flex-col gap-4 bg-default-100 rounded-2xl p-16 sm:p-20 justify-center items-center ">
+      <Card
+        className="flex flex-col gap-4 bg-default-100 rounded-2xl p-16 sm:p-20 justify-center items-center "
+        shadow="none"
+      >
         <h2 className="text-7xl sm:text-8xl">
           {Math.round(currentWeather.temp_c)}°
         </h2>
@@ -38,7 +41,7 @@ export default function WeatherNow({
             },
           )})`}</p>
         </div>
-      </div>
+      </Card>
       <div className="flex flex-col gap-8 ">
         <div className="flex flex-col sm:flex-row gap-8">
           <Card className="card-container" shadow="none">

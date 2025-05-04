@@ -65,7 +65,7 @@ export default function WeatherLater({
             return (
               <Card
                 key={hour.time_epoch}
-                className={`forecast-card-body-child ${isNow ? "" : "bg-default-100"}`}
+                className={`forecast-card-body-child hover:bg-content1 ${isNow ? "" : "bg-default-100"}`}
                 draggable="true"
                 shadow="none"
               >
@@ -105,7 +105,7 @@ export default function WeatherLater({
             return (
               <Card
                 key={day.date_epoch}
-                className={`forecast-card-body-child ${isToday ? "" : "bg-default-100"}`}
+                className={`forecast-card-body-child hover:bg-content1 ${isToday ? "" : "bg-default-100"}`}
                 draggable="true"
                 shadow="none"
               >

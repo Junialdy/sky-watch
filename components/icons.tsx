@@ -231,12 +231,12 @@ export const EyeIcon: React.FC<IconSvgProps> = ({
   );
 };
 
-export const MoonFilledIcon = ({
+export const MoonFilledIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -253,12 +253,12 @@ export const MoonFilledIcon = ({
   </svg>
 );
 
-export const SunFilledIcon = ({
+export const SunFilledIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -275,12 +275,12 @@ export const SunFilledIcon = ({
   </svg>
 );
 
-export const CloudIcon = ({
+export const CloudIcon: React.FC<IconSvgProps> = ({
   size = 40,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}) => (
   <svg
     aria-hidden="true"
     fill="none"
@@ -297,12 +297,12 @@ export const CloudIcon = ({
   </svg>
 );
 
-export const CloudRainIcon = ({
+export const CloudRainIcon: React.FC<IconSvgProps> = ({
   size = 40,
   width,
   height,
   ...props
-}: IconSvgProps) => (
+}) => (
   <svg
     aria-hidden="true"
     fill="none"
@@ -319,5 +319,373 @@ export const CloudRainIcon = ({
     <path d="M16 14v6" />
     <path d="M8 14v6" />
     <path d="M12 16v6" />
+  </svg>
+);
+
+export const CloudDrizzleIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+    <path d="M8 19v1" />
+    <path d="M8 14v1" />
+    <path d="M16 19v1" />
+    <path d="M16 14v1" />
+    <path d="M12 21v1" />
+    <path d="M12 16v1" />
+  </svg>
+);
+
+export const CloudFogIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+    <path d="M16 17H7" />
+    <path d="M17 21H9" />
+  </svg>
+);
+
+export const CloudHailIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+    <path d="M16 14v2" />
+    <path d="M8 14v2" />
+    <path d="M16 20h.01" />
+    <path d="M8 20h.01" />
+    <path d="M12 16v2" />
+    <path d="M12 22h.01" />
+  </svg>
+);
+
+export const CloudLightningIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973" />
+    <path d="m13 12-3 5h4l-3 5" />
+  </svg>
+);
+
+export const CloudMoonIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197" />
+    <path d="M13 16a3 3 0 1 1 0 6H7a5 5 0 1 1 4.9-6Z" />
+  </svg>
+);
+
+export const CloudMoonRainIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M10.188 8.5A6 6 0 0 1 16 4a1 1 0 0 0 6 6 6 6 0 0 1-3 5.197" />
+    <path d="M11 20v2" />
+    <path d="M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24" />
+    <path d="M7 19v2" />
+  </svg>
+);
+
+export const CloudRainWindIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+    <path d="m9.2 22 3-7" />
+    <path d="m9 13-3 7" />
+    <path d="m17 13-3 7" />
+  </svg>
+);
+
+export const CloudSnowIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+    <path d="M8 15h.01" />
+    <path d="M8 19h.01" />
+    <path d="M12 17h.01" />
+    <path d="M12 21h.01" />
+    <path d="M16 15h.01" />
+    <path d="M16 19h.01" />
+  </svg>
+);
+
+export const CloudSunIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M12 2v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="M20 12h2" />
+    <path d="m19.07 4.93-1.41 1.41" />
+    <path d="M15.947 12.65a4 4 0 0 0-5.925-4.128" />
+    <path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z" />
+  </svg>
+);
+
+export const DropletConIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+  </svg>
+);
+
+export const DropletsConIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" />
+    <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" />
+  </svg>
+);
+
+export const HazeIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="m5.2 6.2 1.4 1.4" />
+    <path d="M2 13h2" />
+    <path d="M20 13h2" />
+    <path d="m17.4 7.6 1.4-1.4" />
+    <path d="M22 17H2" />
+    <path d="M22 21H2" />
+    <path d="M16 13a4 4 0 0 0-8 0" />
+    <path d="M12 5V2.5" />
+  </svg>
+);
+
+export const SnowflakeIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="m10 20-1.25-2.5L6 18" />
+    <path d="M10 4 8.75 6.5 6 6" />
+    <path d="m14 20 1.25-2.5L18 18" />
+    <path d="m14 4 1.25 2.5L18 6" />
+    <path d="m17 21-3-6h-4" />
+    <path d="m17 3-3 6 1.5 3" />
+    <path d="M2 12h6.5L10 9" />
+    <path d="m20 10-1.5 2 1.5 2" />
+    <path d="M22 12h-6.5L14 15" />
+    <path d="m4 10 1.5 2L4 14" />
+    <path d="m7 21 3-6-1.5-3" />
+    <path d="m7 3 3 6h4" />
+  </svg>
+);
+
+export const SunIcon: React.FC<IconSvgProps> = ({
+  size = 40,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2" />
+    <path d="M12 20v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="m17.66 17.66 1.41 1.41" />
+    <path d="M2 12h2" />
+    <path d="M20 12h2" />
+    <path d="m6.34 17.66-1.41 1.41" />
+    <path d="m19.07 4.93-1.41 1.41" />
   </svg>
 );

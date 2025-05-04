@@ -1,16 +1,10 @@
 import { Card, CardBody, CardHeader, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
 
-import {
-  CalendarIcon,
-  ClockIcon,
-  CloudIcon,
-  CloudRainIcon,
-  ThermometerSunIcon,
-  WindIcon,
-} from "./icons";
+import { CalendarIcon, ClockIcon, ThermometerSunIcon, WindIcon } from "./icons";
 
 import { laterWeather, currentWeather } from "@/lib/definitions";
+import { getWeatherIcon } from "@/lib/icon-map";
 
 const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const getUvLevel = (uv: number) => {
@@ -77,7 +71,7 @@ export default function WeatherLater({
               >
                 <p className="text-xl">{isNow ? "Now" : formattedTime}</p>
                 <p className="text-4xl">{Math.round(hour.temp_c)}°</p>
-                {isNow ? <CloudRainIcon /> : <CloudIcon />}
+                {getWeatherIcon(hour.condition.code)}
               </Card>
             );
           })}
@@ -123,7 +117,7 @@ export default function WeatherLater({
                     : Math.round(day.day?.avgtemp_c)}
                   °
                 </p>
-                {isToday ? <CloudRainIcon /> : <CloudIcon />}
+                {getWeatherIcon(day.day.condition.code)}
               </Card>
             );
           })}

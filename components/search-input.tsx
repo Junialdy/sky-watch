@@ -48,7 +48,7 @@ export default function SearchInput() {
   }, 200);
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-4">
       <Autocomplete
         aria-label="Input search"
         className="bg-default-100 rounded-lg py-1"
@@ -81,7 +81,7 @@ export default function SearchInput() {
           <AutocompleteItem key={place.key}>{place.label}</AutocompleteItem>
         ))}
       </Autocomplete>
-      <ThemeSwitch />
+      <ThemeSwitch className="bg-default-100 rounded-lg p-3" />
     </div>
   );
 }

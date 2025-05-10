@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
+import clsx from "clsx";
 
 import {
   ThermometerSunIcon,
@@ -24,7 +25,9 @@ export default function WeatherNow({
   return (
     <div className="flex flex-col gap-8 ">
       <Card
-        className="flex flex-col gap-4 bg-default-100 rounded-2xl p-16 sm:p-20 justify-center items-center "
+        className={clsx(
+          `flex flex-col gap-4 rounded-2xl p-16 sm:p-20 justify-center items-center ${currentWeather.is_day == 1 ? "is-day" : "is-night"} `,
+        )}
         shadow="none"
       >
         <h2 className="text-7xl sm:text-8xl">
@@ -32,8 +35,8 @@ export default function WeatherNow({
         </h2>
         <p className="text-xl sm:text-3xl">{currentWeather.condition.text}</p>
         <div className="flex flex-row gap-2 justify-center">
-          <MapPinIcon className="text-base text-default-400" />
-          <p className="text-base text-default-400">{`${location.name}, ${location.country} (${time_now.toLocaleTimeString(
+          <MapPinIcon className="text-base" />
+          <p className="text-base">{`${location.name}, ${location.country} (${time_now.toLocaleTimeString(
             "en-US",
             {
               hour: "2-digit",
